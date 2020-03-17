@@ -1,9 +1,11 @@
 import app from './app';
 import mongoose from 'mongoose';
-import { Test } from "./dataAccess/initial";
+import Test from './dataAccess/initial';
+import FirstAuthorTest from './features/authorse/authors-initial'
 
-const init = Test.prototype;
-init.AdminUserFirst();
+
+Test();
+// FirstAuthorTest();
 
 mongoose.connect("mongodb://localhost/bookshopdb", { useCreateIndex: true, useNewUrlParser: true })
 

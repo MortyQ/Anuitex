@@ -35,36 +35,18 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var user_models_1 = require("../features/shared/db-models/user-models");
-var roles_1 = require("../features/shared/enums/roles");
-var bcrypt_1 = __importDefault(require("bcrypt"));
-function Test() {
+var authors_models_1 = require("./authors-models");
+function FirstAuthorTest() {
     return __awaiter(this, void 0, void 0, function () {
-        var UserFirst, salt, result;
+        var AuthorFirst;
         return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    UserFirst = new user_models_1.UserModel({
-                        email: 'yas@gmail.com',
-                        avatar: 'https://store.playstation.com/store/api/chihiro/00_09_000/container/RU/ru/999/EP0149-CUSA09988_00-AV00000000000004/1553541605000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000',
-                        first_name: 'Sergey',
-                        last_name: 'Yasenev',
-                        password_hash: 'TrueFalse',
-                        roles: roles_1.Roles[0],
-                    });
-                    return [4 /*yield*/, bcrypt_1.default.genSaltSync(10)];
-                case 1:
-                    salt = _a.sent();
-                    UserFirst.password_hash = bcrypt_1.default.hashSync('TrueFalse', salt);
-                    result = user_models_1.UserModel.create(UserFirst);
-                    return [2 /*return*/];
-            }
+            AuthorFirst = new authors_models_1.Author({
+                name: 'Haizen'
+            });
+            return [2 /*return*/];
         });
     });
 }
-exports.default = Test;
-//# sourceMappingURL=initial.js.map
+exports.default = FirstAuthorTest;
+//# sourceMappingURL=authors-initial.js.map

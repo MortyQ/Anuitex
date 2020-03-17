@@ -5,9 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var app_1 = __importDefault(require("./app"));
 var mongoose_1 = __importDefault(require("mongoose"));
-var initial_1 = require("./dataAccess/initial");
-var init = initial_1.Test.prototype;
-init.AdminUserFirst();
+var initial_1 = __importDefault(require("./dataAccess/initial"));
+initial_1.default();
+// FirstAuthorTest();
 mongoose_1.default.connect("mongodb://localhost/bookshopdb", { useCreateIndex: true, useNewUrlParser: true });
 function main() {
     app_1.default.listen(app_1.default.get('port'));

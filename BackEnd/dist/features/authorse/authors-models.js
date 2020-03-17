@@ -8,5 +8,5 @@ var mongoose_1 = __importDefault(require("mongoose"));
 exports.AuthorSchema = new mongoose_1.default.Schema({
     name: { type: String, required: true },
 });
-exports.User = mongoose_1.default.model('Authors', exports.AuthorSchema);
+exports.Author = mongoose_1.default.model('Authors', exports.AuthorSchema);
 //# sourceMappingURL=authors-models.js.map

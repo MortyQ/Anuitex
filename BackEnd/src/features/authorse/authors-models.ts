@@ -11,4 +11,6 @@ export interface IAuthors extends mongoose.Document {
 
   })
 
-  export const User = mongoose.model<IAuthors>('Authors', AuthorSchema);
+
+  interface TestModel  extends IAuthors,mongoose.Document{}
+  export const Author = mongoose.model<IAuthors>('Authors', AuthorSchema);
