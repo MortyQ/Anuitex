@@ -1,7 +1,7 @@
 import {Document, Schema, Model, }  from 'mongoose';
 import mongoose from "mongoose";
 import { ObjectId } from 'mongodb';
-import { Print } from '../shared/enums/printing';
+import { Print } from '../enums/printing';
 
 
 export interface PrintongEdition extends mongoose.Document{
