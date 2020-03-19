@@ -1,7 +1,7 @@
 import {Document, Schema, Model, }  from 'mongoose';
 import mongoose from "mongoose";
-import { Print } from '../shared/enums/printing';
 import { ObjectId } from 'mongodb';
+import { Print } from '../shared/enums/printing';
 
 
 export interface PrintongEdition extends mongoose.Document{
@@ -15,3 +15,17 @@ export interface PrintongEdition extends mongoose.Document{
     author_ids: ObjectId;
 }
 
+    export const BookSchema = new mongoose.Schema({
+        name: {type: String, required: true, unique: true},
+        description: {type:String, required: true},
+        cover_image: {type: String, required: true},
+        removed_at: {type: String, required: true},
+        currency: {type: String, required: true},
+        type: {type: Print, required: true, default: Print.book},
+        price: {type: Number, required: true},
+        author_ids: {type: ObjectId, required: true}
+    })
+
+    interface TestBook extends PrintongEdition, mongoose.Document{}
+
+    export const BookModel = mongoose.model<TestBook>('Book', BookSchema)
