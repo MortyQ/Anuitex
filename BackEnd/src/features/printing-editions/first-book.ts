@@ -1,4 +1,4 @@
-import {PrintongEdition, BookModel } from '../shared/db-models/books-models';
+import { PrintingEdition, BookModel } from '../shared/db-models/books-models';
 import { Print } from '../shared/enums/printing';
 
 async function BookTest(){
@@ -7,12 +7,12 @@ async function BookTest(){
         name: 'Hawkey Story',
         description: 'Plal',
         cover_image: 'Image Note Found',
-        remove_at: 'History',
+        remove_at: true,
         type: Print[0],
-        prise: '450',
-        courrency: 'History About US',
+        price: 450,
+        currency: 'History About US',
     })
-        const result = BookModel.create(BookHawkey)
+    const result = BookModel.create(BookHawkey)
 }
 
 export default BookTest;

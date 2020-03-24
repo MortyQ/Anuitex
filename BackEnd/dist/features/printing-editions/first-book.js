@@ -46,10 +46,10 @@ function BookTest() {
                 name: 'Hawkey Story',
                 description: 'Plal',
                 cover_image: 'Image Note Found',
-                remove_at: 'History',
+                remove_at: true,
                 type: printing_1.Print[0],
-                prise: '450',
-                courrency: 'History About US',
+                price: 450,
+                currency: 'History About US',
             });
             result = books_models_1.BookModel.create(BookHawkey);
             return [2 /*return*/];
