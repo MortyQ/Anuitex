@@ -1,0 +1,231 @@
+.login-panel {
+    position: absolute;
+width: 755px;
+height: 772px;
+right: 400px;
+background: #3F3F3F;
+z-index: 111;
+display: flex;
+flex-direction: column;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: flex-end;
+    background: #5D5C5C;
+    width: 754px;
+height: 48px;
+    align-items: center;
+
+}
+.btn-esc button {
+    color: #FB7134;
+    border: none;
+    background-color: #5D5C5C;
+    cursor: pointer;
+    position: absolute;
+   right: 16px;
+   top: 20px;
+}
+.fa-user-clock {
+    font-size: 90px;
+    color: #3F3F3F;
+    text-align: center;
+    padding-left: 10px;
+}
+
+.User-pick {
+    position: absolute;
+left: 41.79%;
+right: 40.33%;
+top: 12.17%;
+bottom: 73.48%;
+background: #615F5F;
+align-items: center;
+display: flex;
+justify-content: center;
+border-radius: 50%;
+width: 150px ;
+height: 150px;
+}
+
+.SingIn p {
+    position: absolute;
+top: 196px;
+left: 101px;
+
+font-family: Oswald;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 43px;
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: capitalize;
+
+color: #FF6825;
+}
+
+.email-login {
+    position: absolute;
+    left: 101px;
+    top: 257.4px;
+}
+
+.email-login p {
+    font-family: Oswald;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 55px;
+color: #FEFEFE;
+opacity: 0.8;
+}
+
+.email-login input {
+    position: absolute;
+    top: 70px;
+background: #868686;
+opacity: 0.3;
+width: 552px;
+height: 48px;
+border: none;
+}
+
+.password-login {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 101px;
+    top: 352px;
+}
+
+.text-password {
+display: flex;
+flex-direction: row;
+font-family: Oswald;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 55px;
+
+color: #FFFFFF;
+opacity: 0.8;
+}
+
+.forget-psw {
+position: absolute;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 18px;
+color: #FFFFFF;
+opacity: 0.5;
+left: 429px;
+top: 25px;
+white-space: nowrap;
+}
+
+.password-login input {
+    position: absolute;
+    top: 70px;
+background: #868686;
+opacity: 0.3;
+width: 552px;
+height: 48px;
+border: none;
+}
+
+.remember {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 101px;
+    top: 510px;
+}
+
+.remember p {
+    position: absolute;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 55px;
+color: #DBDBDB;
+white-space: nowrap;
+top: -29px;
+left: 35px;
+}
+
+.remember input {
+    border: 1px solid #ADADAD;
+box-sizing: border-box;
+background-color: #3F3F3F;
+}
+
+.btn-SingIn {
+    position: absolute;
+    left: 524px;
+    top: 490px;
+}
+
+.btn-SingIn button {
+    background: #FB7134;
+    border: none;
+    width: 130px;
+    height: 50px;
+    
+
+}
+
+.btn-SingIn button p{
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 43px;
+   text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    display: inline;
+
+}
+
+.FinalTextLogin{
+position: absolute;
+left: 41.43%;
+right: 23.41%;
+top: 80.53%;
+bottom: 17.45%;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 24px;
+display: flex;
+align-items: center;
+color: #999999;
+}
+
+.SingUp {
+    width: 200px;
+    position: absolute;
+left: 41.43%;
+right: 32.86%;
+top: 84.58%;
+bottom: 7.94%;
+background-color: #3F3F3F;
+border: 2px solid #F9621F;
+}
+.SingUp p {
+font-family: Oswald;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 14px;
+display: inline-block;
+color: #B9B8B7;
+
+}

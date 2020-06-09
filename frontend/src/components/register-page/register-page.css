@@ -1,0 +1,129 @@
+.RegisterPage {
+    position: absolute;
+    width: 755px;
+    height: 900px;
+    right: 400px;
+    background: #3F3F3F;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+}
+
+.CreateAccount {
+font-family: Oswald;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 43px;
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: capitalize;
+color: #FF6825;
+position: absolute;
+top: 211px;
+left: 110px;
+}
+
+.register-input {
+display: flex;
+flex-direction: column;
+position: absolute;
+    left: 101px;
+}
+
+.register-input span {
+font-family: Oswald;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 55px;
+text-transform: capitalize;
+color: #FEFEFE;
+opacity: 0.7;
+position: absolute;
+top: -40px;
+}
+
+.register-input input {
+    background: #868686;
+opacity: 0.3;
+width: 552px;
+height: 48px;
+border: none;
+}
+
+.FrstName {
+    top: 305px;
+}
+.LastName {
+    top: 389px;
+}
+
+.Email-register {
+    top: 478px;
+}
+
+.Pswrd-register {
+    top: 565px;
+}
+
+.Conf-pswrd {
+    top: 657px;
+}
+
+.CreateAccount {
+    color: white;
+    position: absolute;
+background: #FB7134;
+width: 225px;
+height: 48px;
+left: 428px;
+top: 760px;
+border: none;
+}
+
+.CreateAccount p {
+font-family: Oswald;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 43px;
+text-transform: capitalize;
+color: #FFFFFF;
+display: inline-block;
+position: absolute;
+top: -16.5px;
+left: 25px;
+}
+
+.FinalText-Register{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 835px;
+    left: 101px;
+}
+.FinalText-Register span {
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+display: flex;
+align-items: center;
+color: #999999;
+}
+
+.FinalText-Register a {
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 14px;
+display: flex;
+align-items: center;
+text-align: center;
+text-decoration-line: underline;
+color: #FB7134;
+}
