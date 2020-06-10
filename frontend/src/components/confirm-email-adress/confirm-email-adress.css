@@ -1,0 +1,29 @@
+.login-panel {
+    position: absolute;
+width: 755px;
+height: 772px;
+right: 400px;
+background: #3F3F3F;
+z-index: 111;
+display: flex;
+flex-direction: column;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: flex-end;
+    background: #5D5C5C;
+    width: 754px;
+height: 48px;
+    align-items: center;
+
+}
+.btn-esc button {
+    color: #FB7134;
+    border: none;
+    background-color: #5D5C5C;
+    cursor: pointer;
+    position: absolute;
+   right: 16px;
+   top: 20px;
+}

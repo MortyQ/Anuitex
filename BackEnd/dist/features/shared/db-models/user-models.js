@@ -8,7 +8,7 @@ var roles_1 = require("../enums/roles");
 ;
 exports.UserSchema = new mongoose_1.default.Schema({
     email: { type: String, required: true, },
-    avatar: { type: String, required: true },
+    avatar: { type: String, required: false },
     first_name: { type: String, required: true },
     last_name: { type: String, required: true },
     password_hash: { type: String, required: true },
