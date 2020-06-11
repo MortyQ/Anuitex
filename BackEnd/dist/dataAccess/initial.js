@@ -39,7 +39,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var user_models_1 = require("../features/shared/db-models/user-models");
+var user_models_1 = __importDefault(require("../features/shared/db-models/user-models"));
 var roles_1 = require("../features/shared/enums/roles");
 var bcrypt_1 = __importDefault(require("bcrypt"));
 function Test() {
@@ -48,7 +48,7 @@ function Test() {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    UserFirst = new user_models_1.UserModel({
+                    UserFirst = new user_models_1.default({
                         email: 'yas@gmail.com',
                         avatar: 'https://store.playstation.com/store/api/chihiro/00_09_000/container/RU/ru/999/EP0149-CUSA09988_00-AV00000000000004/1553541605000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000',
                         first_name: 'Sergey',
@@ -60,7 +60,9 @@ function Test() {
                 case 1:
                     salt = _a.sent();
                     UserFirst.password_hash = bcrypt_1.default.hashSync('TrueFalse', salt);
-                    result = user_models_1.UserModel.create(UserFirst);
+                    return [4 /*yield*/, user_models_1.default.create(UserFirst)];
+                case 2:
+                    result = _a.sent();
                     return [2 /*return*/];
             }
         });

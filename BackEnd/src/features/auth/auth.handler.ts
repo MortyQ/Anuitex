@@ -1,9 +1,16 @@
 import {Response, Request} from 'express';
-import { registerUser } from './auth.services';
+import { registerUser, complitRegistr } from './auth.services';
 
-export async function register(res:Response, req: Request,){
+export async function register(req: Request, res: Response){
 
 
-    await registerUser(req.body).then()
-    console.log(req.body)
+    await registerUser(req.body.user)
+    .then(user => res.send(user))
+    .catch();
+}
+
+export async function registerEmail (req: Request, res: Response){
+    await complitRegistr(req.body._id)
+    .then(user => res.send(user))
+    .catch();
 }

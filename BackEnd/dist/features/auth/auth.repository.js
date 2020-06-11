@@ -35,13 +35,67 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-function register() {
+var user_models_1 = __importDefault(require("../shared/db-models/user-models"));
+var bcrypt_1 = __importDefault(require("bcrypt"));
+var email_helper_1 = require("./email.helper");
+function register(user) {
     return __awaiter(this, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            return [2 /*return*/];
+        var checkUser, salt, _a, result;
+        return __generator(this, function (_b) {
+            switch (_b.label) {
+                case 0: return [4 /*yield*/, user_models_1.default.findOne({ email: user.email })];
+                case 1:
+                    checkUser = _b.sent();
+                    if (checkUser) {
+                        return [2 /*return*/, false];
+                    }
+                    return [4 /*yield*/, bcrypt_1.default.genSaltSync(10)];
+                case 2:
+                    salt = _b.sent();
+                    _a = user;
+                    return [4 /*yield*/, bcrypt_1.default.hashSync('TrFls', salt)];
+                case 3:
+                    _a.password_hash = _b.sent();
+                    return [4 /*yield*/, user_models_1.default.create(user)];
+                case 4:
+                    result = _b.sent();
+                    if (result === null) {
+                        return [2 /*return*/, false];
+                    }
+                    email_helper_1.sendingEmail(result);
+                    return [2 /*return*/, true];
+            }
         });
     });
 }
 exports.register = register;
+function confirmEmail(id) {
+    return __awaiter(this, void 0, void 0, function () {
+        var user, newUser, confirmEm;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    user = user_models_1.default.findOne({ _id: id });
+                    return [4 /*yield*/, (!user)];
+                case 1:
+                    if (_a.sent()) {
+                        return [2 /*return*/, false];
+                    }
+                    return [4 /*yield*/, user];
+                case 2:
+                    newUser = _a.sent();
+                    newUser.confirmed_email = true;
+                    return [4 /*yield*/, user_models_1.default.update(user, newUser)];
+                case 3:
+                    confirmEm = _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.confirmEmail = confirmEmail;
 //# sourceMappingURL=auth.repository.js.map

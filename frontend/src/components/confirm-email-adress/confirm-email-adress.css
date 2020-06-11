@@ -1,13 +1,27 @@
-.login-panel {
+.confirm-email {
     position: absolute;
 width: 755px;
-height: 772px;
+height: 500px;
 right: 400px;
 background: #3F3F3F;
 z-index: 111;
 display: flex;
-flex-direction: column;
+
 }
+
+.img-confirm {
+    display: flex;
+    position: absolute;
+    left: 174px;
+    top: 151px;
+}
+
+.img-disc {
+    position: absolute;
+    left: 174px;
+    top: 237px;
+}
+
 
 .btn-div {
     display: flex;

@@ -1,4 +1,3 @@
-import app from './app';
 import mongoose from 'mongoose';
 import Test from './dataAccess/initial';
 import FirstAuthorTest from './features/authorse/authors-initial'
@@ -6,13 +5,12 @@ import BookTest from './features/printing-editions/first-book';
 import { authRouter } from './features/auth/index';
 import  cors from 'cors';
 import bodyParser from 'body-parser';
+import { Application } from 'express';
+import express from 'express';
+import { authorRouter } from './features/authorse/index';
 
 
-
-
-
-
-
+const app: Application = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -22,15 +20,16 @@ app.use(cors())
 // BookTest();
 // FirstAuthorTest();
 
-// mongoose.connect("mongodb://localhost/bookshopdb", { useCreateIndex: true, useNewUrlParser: true })
+mongoose.connect("mongodb://localhost/bookshopdb", { useCreateIndex: true, useNewUrlParser: true })
 
-
+console.log("WE are here")
 app.use('/auth', authRouter)
+app.use('/author', authorRouter)
 
 
 function main(){
-    app.listen(app.get('port'));
-    console.log('Server on port', app.get('port'))
+    app.listen(3333);
+    console.log('Server on port', 3333)
 
 }
 

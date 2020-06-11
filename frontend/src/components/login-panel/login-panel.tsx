@@ -25,10 +25,10 @@ import './login-panel.css'
             registerOpen: true
         })
     }
-        
+
 
         return(
-   
+
             <div className='login-panel'>
                 <div className='btn-div' >
                     <div className='btn-esc'>

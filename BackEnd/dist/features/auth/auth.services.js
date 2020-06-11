@@ -41,10 +41,34 @@ function registerUser(user) {
     return __awaiter(this, void 0, void 0, function () {
         var result;
         return __generator(this, function (_a) {
-            result = auth_repository_1.register();
-            return [2 /*return*/, 'hello'];
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, auth_repository_1.register(user)];
+                case 1:
+                    result = _a.sent();
+                    if (!result) {
+                        return [2 /*return*/, result];
+                    }
+                    return [2 /*return*/, result];
+            }
         });
     });
 }
 exports.registerUser = registerUser;
+function complitRegistr(id) {
+    return __awaiter(this, void 0, void 0, function () {
+        var result;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, auth_repository_1.confirmEmail(id)];
+                case 1:
+                    result = _a.sent();
+                    if (!result) {
+                        return [2 /*return*/, result];
+                    }
+                    return [2 /*return*/, result];
+            }
+        });
+    });
+}
+exports.complitRegistr = complitRegistr;
 //# sourceMappingURL=auth.services.js.map

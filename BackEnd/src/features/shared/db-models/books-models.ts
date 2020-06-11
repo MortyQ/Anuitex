@@ -4,7 +4,7 @@ import { ObjectId } from 'mongodb';
 import { Print } from '../enums/printing';
 
 
-export interface PrintingEdition extends mongoose.Document{
+export interface PrintingEdition{
     name: string;
     description: string;
     cover_image: string;
@@ -14,7 +14,7 @@ export interface PrintingEdition extends mongoose.Document{
     currency: string;
 }
 
-    export const BookSchema = new mongoose.Schema({
+    export const bookSchema = new mongoose.Schema({
         name: {type: String, required: true,},
         description: {type:String, required: true},
         cover_image: {type: String, required: true},
@@ -24,6 +24,6 @@ export interface PrintingEdition extends mongoose.Document{
         price: {type: Number, required: true},
     })
 
-    interface TestBook extends PrintingEdition, mongoose.Document{}
+    interface bookModel extends PrintingEdition, mongoose.Document{}
 
-    export const BookModel = mongoose.model<TestBook>('Book', BookSchema)
+    export const BookModel = mongoose.model<bookModel>('Book', bookSchema)

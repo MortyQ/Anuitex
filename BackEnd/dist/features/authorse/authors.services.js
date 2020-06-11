@@ -36,17 +36,22 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var authors_models_1 = require("./authors-models");
-function FirstAuthorTest() {
+var authors_repository_1 = require("./authors.repository");
+function create(author) {
     return __awaiter(this, void 0, void 0, function () {
-        var AuthorFirst;
+        var result;
         return __generator(this, function (_a) {
-            AuthorFirst = new authors_models_1.AuthorModel({
-                name: 'Haizen'
-            });
-            return [2 /*return*/];
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, authors_repository_1.createAuthor(author)];
+                case 1:
+                    result = _a.sent();
+                    if (!result) {
+                        return [2 /*return*/, result];
+                    }
+                    return [2 /*return*/, result];
+            }
         });
     });
 }
-exports.default = FirstAuthorTest;
-//# sourceMappingURL=authors-initial.js.map
+exports.create = create;
+//# sourceMappingURL=authors.services.js.map

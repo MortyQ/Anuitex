@@ -37,18 +37,34 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var auth_services_1 = require("./auth.services");
-function register(res, req) {
+function register(req, res) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, auth_services_1.registerUser(req.body).then()];
+                case 0: return [4 /*yield*/, auth_services_1.registerUser(req.body.user)
+                        .then(function (user) { return res.send(user); })
+                        .catch()];
                 case 1:
                     _a.sent();
-                    console.log(req.body);
                     return [2 /*return*/];
             }
         });
     });
 }
 exports.register = register;
+function registerEmail(req, res) {
+    return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, auth_services_1.complitRegistr(req.body._id)
+                        .then(function (user) { return res.send(user); })
+                        .catch()];
+                case 1:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.registerEmail = registerEmail;
 //# sourceMappingURL=auth.handler.js.map

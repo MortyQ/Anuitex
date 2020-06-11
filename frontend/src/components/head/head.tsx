@@ -6,20 +6,23 @@ import K from'./img/VectorK.png'
 import TextImg from './img/Text.png'
 import LoginPanel from '../login-panel/login-panel';
 import RegisterPage from '../register-page/register-page';
+import ConfirmEmail from '../confirm-email-adress/confirm-email-adress';
 
 const Head =()=> {
 
 
     const [state, setState] =useState({
         loginOpen: false,
-        registerOpen: false
+        registerOpen: false,
+        showConfirmEmail: false,
 
     });
 
   const  openLogin =()=>{
             setState({
                 loginOpen: true,
-                registerOpen: false
+                registerOpen: false,
+                showConfirmEmail: false,
             })
     }
 
@@ -43,6 +46,7 @@ const Head =()=> {
                                 <a  onClick={openLogin} >login</a>
                                 {state.loginOpen&& <LoginPanel stateHeader={setState} />}
                                 {state.registerOpen&& <RegisterPage stateHeader={setState} />}
+                                {state.showConfirmEmail&& <ConfirmEmail stateHeader={setState} />}
                             </div>
                             <div className='person'>
                             <a ><i className="fas fa-user-check"></i></a>
@@ -53,9 +57,9 @@ const Head =()=> {
                         </nav>
 
                 </header>
-            
+
         )
-    
+
 }
 
 export default Head;
