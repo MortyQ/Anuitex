@@ -1,0 +1,96 @@
+.authors {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 79.9vh;
+}
+.authors-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.plus-authors{
+    display: flex;
+    width: 100px;
+    height: 90px;
+    font-size: 30px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.authors-logo h1 {
+
+    padding-left: 150px;
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 55px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #343434;
+}
+
+.authors-main {
+    width: 100%;
+    height: 100%;
+}
+
+.table-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+table {
+    width: 80%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  text-align: left;
+  border-collapse: collapse;
+  color: #3E4347;
+    border: 1px solid black;
+}
+
+.table-top{
+    width: 1639px;
+    height: 50px;
+background: #4E4E4E;
+font-family: Oswald;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 17px;
+color: #FFFFFF;
+text-align: center;
+}
+
+.frs{
+    width: 10%;
+}
+
+.ces{
+    width: 30%;
+}
+.thr{
+    width: 50%;
+}
+
+.fr{
+    width: 10%;
+}
+
+
+tr {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+

@@ -30,6 +30,8 @@ const Head =()=> {
 
         return(
                 <header className='header'>
+                    <div className='logo'>
+
                     <div className='book'>
                         <img src={B} />
                         <img src={O} />
@@ -39,11 +41,12 @@ const Head =()=> {
                         <div className='text' >
                         <img src={TextImg} />
                         </div>
+                    </div>
 
                         <nav>
                             <div className='login'>
                                 {/* eslint-disable-next-line*/}
-                                <a  onClick={openLogin} >login</a>
+                                  <a  onClick={openLogin} >login</a>
                                 {state.loginOpen&& <LoginPanel stateHeader={setState} />}
                                 {state.registerOpen&& <RegisterPage stateHeader={setState} />}
                                 {state.showConfirmEmail&& <ConfirmEmail stateHeader={setState} />}

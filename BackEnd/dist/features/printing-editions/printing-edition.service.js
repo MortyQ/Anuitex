@@ -36,13 +36,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var authors_models_1 = require("./authors-models");
-function createAuthor(author) {
+var printing_edition_repository_1 = require("./printing-edition.repository");
+function createBookService(book) {
     return __awaiter(this, void 0, void 0, function () {
         var result;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, authors_models_1.AuthorModel.create(author)];
+                case 0: return [4 /*yield*/, printing_edition_repository_1.createBook(book)];
                 case 1:
                     result = _a.sent();
                     if (!result) {
@@ -53,31 +53,5 @@ function createAuthor(author) {
         });
     });
 }
-exports.createAuthor = createAuthor;
-function addBook(idBooks, idAuthors) {
-    return __awaiter(this, void 0, void 0, function () {
-        var _this = this;
-        return __generator(this, function (_a) {
-            idAuthors.forEach(function (id) { return __awaiter(_this, void 0, void 0, function () {
-                var author, newAuthor, result;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            author = authors_models_1.AuthorModel.findById(id);
-                            return [4 /*yield*/, author];
-                        case 1:
-                            newAuthor = _a.sent();
-                            newAuthor.product_ids.push(idBooks);
-                            return [4 /*yield*/, authors_models_1.AuthorModel.update(author, newAuthor)];
-                        case 2:
-                            result = _a.sent();
-                            return [2 /*return*/];
-                    }
-                });
-            }); });
-            return [2 /*return*/];
-        });
-    });
-}
-exports.addBook = addBook;
-//# sourceMappingURL=authors.repository.js.map
+exports.createBookService = createBookService;
+//# sourceMappingURL=printing-edition.service.js.map

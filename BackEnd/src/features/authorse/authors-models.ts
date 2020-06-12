@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 export interface Authors {
     name: String;
     removed_at: Boolean;
-    product_ids: String;
+    product_ids: Array<string>;
   };
 
   export const AuthorSchema = new mongoose.Schema({

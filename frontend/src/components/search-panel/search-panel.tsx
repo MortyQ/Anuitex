@@ -5,15 +5,23 @@ import './search-panel.css';
 const SearchPanel =()=> {
 
 
-        const SecondPage = <a href="#"> <p className='page-second' >Book</p></a>
-        const Page = <div> <a href="#"> <p   className='page-scrin'>Home /{SecondPage}</p></a></div>
+        const home = <div> <a href="/home"> <p   className='page-scrin'>Home</p></a></div>
+        const books = <div> <a href="/books"> <p className='page-second' >Books Catalog</p></a></div>
+        const authors =  <div> <a href="/authors"> <p className='page-second' >Authors</p></a></div>
 
 
         return(
             <div className='panel'>
-                {Page}
+                <nav className='nav-menu-search'>
+                {home}
+               {books}
+               {authors}
+
+                </nav>
+            <div>
 
             <input  className='search-action'  type="text" placeholder="Search"/>
+            </div>
 
             </div>
         )

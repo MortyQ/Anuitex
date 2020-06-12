@@ -8,6 +8,7 @@ import bodyParser from 'body-parser';
 import { Application } from 'express';
 import express from 'express';
 import { authorRouter } from './features/authorse/index';
+import { bookRouter } from './features/printing-editions/index';
 
 
 const app: Application = express();
@@ -25,6 +26,7 @@ mongoose.connect("mongodb://localhost/bookshopdb", { useCreateIndex: true, useNe
 console.log("WE are here")
 app.use('/auth', authRouter)
 app.use('/author', authorRouter)
+app.use('/books', bookRouter)
 
 
 function main(){

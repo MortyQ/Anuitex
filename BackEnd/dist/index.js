@@ -9,6 +9,7 @@ var cors_1 = __importDefault(require("cors"));
 var body_parser_1 = __importDefault(require("body-parser"));
 var express_1 = __importDefault(require("express"));
 var index_2 = require("./features/authorse/index");
+var index_3 = require("./features/printing-editions/index");
 var app = express_1.default();
 app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use(body_parser_1.default.json());
@@ -20,6 +21,7 @@ mongoose_1.default.connect("mongodb://localhost/bookshopdb", { useCreateIndex: t
 console.log("WE are here");
 app.use('/auth', index_1.authRouter);
 app.use('/author', index_2.authorRouter);
+app.use('/books', index_3.bookRouter);
 function main() {
     app.listen(3333);
     console.log('Server on port', 3333);

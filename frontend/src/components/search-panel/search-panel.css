@@ -1,16 +1,29 @@
 .panel {
-    position: absolute;
+display: flex;
+flex-direction: row;
 width: 1920px;
 height: 80px;
 left: 0px;
 top: 96px;
 background: #FF6825;
+justify-content: space-between;
+}
+
+.nav-menu-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+}
+.nav-menu-search div {
+    padding-top: 30px;
+}
+.nav-menu-search div a {
+    text-decoration: none;
 }
 
 .page-scrin {
-    position: absolute;
-    top: 33px;
-    left: 141px;
     font-family: Oswald;
     font-style: normal;
     font-weight: 600;
@@ -19,14 +32,9 @@ background: #FF6825;
     color: white;
     display: flex;
     flex-direction: row;
-    width: 250px;
 }
 
 .page-second {
-    position: absolute;
-   left: 55px;
-   bottom: 3px;
-   top: -14px;
    color: white;
    font-family: Oswald;
    font-style: normal;
@@ -36,11 +44,16 @@ background: #FF6825;
 }
 
 .search-action{
-    position: absolute;
+
 width: 447px;
 height: 40px;
     left: 1333px;
     top: 20px;
     border: none;
 background: rgba(244, 244, 244, 0.78);
+}
+
+.panel div {
+    padding-top: 20px;
+   padding-right: 100px;
 }

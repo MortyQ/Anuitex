@@ -13,6 +13,8 @@ export async function register(user:User): Promise<boolean> {
 
     const salt = await bcrypt.genSaltSync(10);
     user.password_hash = await bcrypt.hashSync('TrFls', salt);
+
+
     const result = await userModel.create(user)
     if(result === null){
         return false

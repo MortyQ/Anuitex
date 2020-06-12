@@ -91,6 +91,8 @@ opacity: 0.3;
 width: 552px;
 height: 48px;
 border: none;
+color: white;
+font-size: 27px;
 }
 
 .password-login {
@@ -136,6 +138,8 @@ opacity: 0.3;
 width: 552px;
 height: 48px;
 border: none;
+color: white;
+font-size: 27px;
 }
 
 .remember {
