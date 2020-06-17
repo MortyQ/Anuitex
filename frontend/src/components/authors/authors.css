@@ -34,6 +34,9 @@
 }
 
 .authors-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
 }
@@ -85,12 +88,32 @@ text-align: center;
     width: 10%;
 }
 
+.main-frs {
+    height: 100px;
+}
 
 tr {
     border: 1px solid black;
 }
 
 td {
+    text-align: left;
+    padding-left: 15px;
     border: 1px solid black;
 }
 
+.fa-pencil-alt {
+    font-size: 35px;
+}
+
+.main-fr a {
+    width: 5px;
+    height: 5px;
+}
+.main-thr{
+    display: flex;
+    flex-direction: column;
+}
+.times-fa {
+    font-size: 35px;
+}

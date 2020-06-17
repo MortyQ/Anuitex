@@ -1,5 +1,5 @@
 import { BookModel, PrintingEdition } from '../shared/db-models/books-models';
-import { createBook } from './printing-edition.repository';
+import { createBook, getBooks } from './printing-edition.repository';
 
 
 export async function createBookService(book: PrintingEdition): Promise <Boolean> {
@@ -10,4 +10,9 @@ export async function createBookService(book: PrintingEdition): Promise <Boolean
     }
     return true
 
+}
+
+export async function getBooksService(){
+    const result = await getBooks()
+    return result
 }

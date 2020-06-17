@@ -1,8 +1,8 @@
-import { AuthorSchema, AuthorModel } from './authors-models';
+import { AuthorSchema, authorModel } from './authors-models';
 
 async function FirstAuthorTest(){
 
-    const AuthorFirst = new AuthorModel({
+    const AuthorFirst = new authorModel({
         name: 'Haizen'
     })
 }

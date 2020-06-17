@@ -1,33 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './authors.css'
 import AddAuthors from './add-authors/add-authors';
+import { getAuthor, } from '../../services/author';
+
 
 
 const AuthorsPage =()=>{
+
 
     const [state, setState] =useState({
         authorCreate: false,
     });
 
+    const [data, setData] = useState({
+        authors:[] as any
+    })
+
+
+
+
     const openAuthorRegister =()=>{
         setState({
             authorCreate:true,
         })
-
     }
-    // const elementsTable = author.map((item)=>{
 
-    //         let count = 0;
+    useEffect(()=> {
+            func()
+    },[])
+    const func =async ()=>{
+        const resultData =await getAuthor();
+        setData({
+            authors: resultData
+        })
+    }
 
-    //     return(
-    //          <tr>
-    //         <td className='frs' >{count++}</td>
-    //         <td className='sec' >Author1</td>
-    //         <td className='thr' >Book1</td>
-    //         <td className='fr' >Book1</td>
-    //         </tr>
-    //         )
-    // })
+    let count = 0;
+        const elementsTable = data.authors.map(item => {
+            let result = ""
+            item.product_ids.map(item =>{
+                result = item.title
+            })
+
+        return(
+            <tr>
+            <td className='frs main-frs' >{count++}</td>
+        <td className='sec main-sec' >{item.name}</td>
+        <td className='thr main-thr' >{item.product_ids.map(item =>{
+                return (<span>{item.title}</span>)
+            })}</td>
+              <td className='fr  main-fr' ><a><i className="fas fa-pencil-alt"></i></a><a><i className="fas fa-times times-fa"></i></a></td>
+             </tr>
+            )
+    });
 
     return(
         <section className='authors'>
@@ -50,6 +75,8 @@ const AuthorsPage =()=>{
                         <td className='table-top thr' >Product</td>
                         <td className='table-top fr' >    </td>
                         </tr>
+                            {elementsTable}
+
                     </table>
                 </div>
             </div>

@@ -19,3 +19,7 @@ export async function createBook(book: PrintingEdition): Promise <Boolean> {
 
 }
 
+export async function getBooks(): Promise<Array<PrintingEdition>>{
+    const result = await BookModel.find().populate('author_ids')
+    return result
+}

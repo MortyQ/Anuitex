@@ -43,7 +43,7 @@ function createHandler(req, res) {
             switch (_a.label) {
                 case 0:
                     console.log(req.body);
-                    return [4 /*yield*/, printing_edition_service_1.createBookService(req.body)
+                    return [4 /*yield*/, printing_edition_service_1.createBookService(req.body.book)
                             .then(function (book) { return res.send(book); })
                             .catch()];
                 case 1:
@@ -54,4 +54,19 @@ function createHandler(req, res) {
     });
 }
 exports.createHandler = createHandler;
+function getBooksHandler(req, res) {
+    return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, printing_edition_service_1.getBooksService()
+                        .then(function (books) { return res.send(books); })
+                        .catch()];
+                case 1:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.getBooksHandler = getBooksHandler;
 //# sourceMappingURL=printing-edition.handler.js.map

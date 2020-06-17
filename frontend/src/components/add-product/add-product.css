@@ -1,0 +1,19 @@
+.add-product{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.catalog-text {
+    padding-left: 190px;
+}
+
+.add-product-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 190px;
+}
+.plus-books {
+    padding-right: 150px;
+    padding-bottom: 30px;
+}

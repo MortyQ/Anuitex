@@ -42,7 +42,7 @@ function createAuthor(author) {
         var result;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, authors_models_1.AuthorModel.create(author)];
+                case 0: return [4 /*yield*/, authors_models_1.authorModel.create(author)];
                 case 1:
                     result = _a.sent();
                     if (!result) {
@@ -63,12 +63,12 @@ function addBook(idBooks, idAuthors) {
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0:
-                            author = authors_models_1.AuthorModel.findById(id);
+                            author = authors_models_1.authorModel.findById(id);
                             return [4 /*yield*/, author];
                         case 1:
                             newAuthor = _a.sent();
                             newAuthor.product_ids.push(idBooks);
-                            return [4 /*yield*/, authors_models_1.AuthorModel.update(author, newAuthor)];
+                            return [4 /*yield*/, authors_models_1.authorModel.update(author, newAuthor)];
                         case 2:
                             result = _a.sent();
                             return [2 /*return*/];
@@ -80,4 +80,18 @@ function addBook(idBooks, idAuthors) {
     });
 }
 exports.addBook = addBook;
+function getAuthors() {
+    return __awaiter(this, void 0, void 0, function () {
+        var result;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, authors_models_1.authorModel.find().populate('author_ids')];
+                case 1:
+                    result = _a.sent();
+                    return [2 /*return*/, result];
+            }
+        });
+    });
+}
+exports.getAuthors = getAuthors;
 //# sourceMappingURL=authors.repository.js.map

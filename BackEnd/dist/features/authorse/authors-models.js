@@ -10,5 +10,5 @@ exports.AuthorSchema = new mongoose_1.default.Schema({
     removed_at: { type: Boolean, default: false },
     product_ids: [{ type: mongoose_1.default.Schema.Types.ObjectId, ref: 'Book', }]
 });
-exports.AuthorModel = mongoose_1.default.model('Authors', exports.AuthorSchema);
+exports.authorModel = mongoose_1.default.model('Authors', exports.AuthorSchema);
 //# sourceMappingURL=authors-models.js.map

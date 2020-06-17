@@ -6,13 +6,13 @@ import { Currency } from '../enums/currency';
 
 
 export interface PrintingEdition{
-    name: string;
+    title: string;
     description: string;
     cover_image: string;
     removed_at: boolean;
     type: Print;
     price: number;
-    currency: string;
+    currency: Currency;
     author_ids: Array<string>;
 }
 

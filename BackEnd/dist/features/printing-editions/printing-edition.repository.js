@@ -58,4 +58,18 @@ function createBook(book) {
     });
 }
 exports.createBook = createBook;
+function getBooks() {
+    return __awaiter(this, void 0, void 0, function () {
+        var result;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, books_models_1.BookModel.find().populate('author_ids')];
+                case 1:
+                    result = _a.sent();
+                    return [2 /*return*/, result];
+            }
+        });
+    });
+}
+exports.getBooks = getBooks;
 //# sourceMappingURL=printing-edition.repository.js.map

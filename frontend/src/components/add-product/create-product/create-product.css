@@ -1,0 +1,182 @@
+.createPage {
+    position: absolute;
+    top: 150px;
+    width: 1200px;
+    height: 770px;
+    right: 400px;
+    background: #3F3F3F;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-new-product-text {
+color: #FF6825;
+text-align: center;
+font-family: Oswald;
+font-style: normal;
+font-weight: 600;
+font-size: 55px;
+line-height: 55px;
+}
+
+.create-product-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.create-left {
+
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-create-left {
+    font-family: Oswald;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+text-transform: capitalize;
+color: #FEFEFE;
+opacity: 0.7;
+align-self: flex-start;
+padding-right: 83px;
+}
+
+.text-create-left-sec {
+    font-family: Oswald;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+text-transform: capitalize;
+color: #FEFEFE;
+opacity: 0.7;
+align-self: flex-start;
+padding-right: 30px;
+}
+
+.create-right {
+    width: 45%;
+    height: 100%;
+    border: 3px solid yellow;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-input-create {
+    width: 350px;
+    height:100px;
+    background: #868686;
+    color: white;
+    font-size: 17px;
+    opacity: 0.3;
+    white-space: normal;
+}
+
+.text-input-create-sec {
+    width: 350px;
+    height:220px;
+    background: #868686;
+    color: white;
+    font-size: 17px;
+    opacity: 0.3;
+    white-space: normal;
+    padding-top: 50px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.create-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 30px;
+    width: 80%;
+    align-self: center;
+}
+
+.cncl-prod {
+    position: absolute;
+    left: 257px;
+    bottom: 61px;
+    display: inline-block;
+    opacity: 0.6;
+    background: #3F3F3F;
+    border: 2px solid #FF6825;
+    width: 25%;
+    height: 49px;
+}
+
+.cncl-prod p {
+    display: inline-block;
+    text-align: center;
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.cncl-prod-right {
+    position: absolute;
+    left: 740px;
+    bottom: 61px;
+    background: #FF6825;
+    border: 2px solid #FF6825;
+    width: 25%;
+    height: 49px;
+}
+
+.cncl-prod-right p {
+    text-align: center;
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-align: center;
+ }
+
+ .book-img {
+     width: 50px;
+ }
+
+ .select-body {
+     display: flex;
+     flex-direction: column;
+ }
+
+.select {
+     width: 50%;
+     height: 50px;
+     align-items: center;
+     padding-left: 50px;
+ }
+
+.whrite-prise {
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.select-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}

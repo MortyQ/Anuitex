@@ -54,4 +54,18 @@ function create(author) {
     });
 }
 exports.create = create;
+function getAuthorsService() {
+    return __awaiter(this, void 0, void 0, function () {
+        var result;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, authors_repository_1.getAuthors()];
+                case 1:
+                    result = _a.sent();
+                    return [2 /*return*/, result];
+            }
+        });
+    });
+}
+exports.getAuthorsService = getAuthorsService;
 //# sourceMappingURL=authors.services.js.map

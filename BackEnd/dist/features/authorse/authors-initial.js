@@ -41,7 +41,7 @@ function FirstAuthorTest() {
     return __awaiter(this, void 0, void 0, function () {
         var AuthorFirst;
         return __generator(this, function (_a) {
-            AuthorFirst = new authors_models_1.AuthorModel({
+            AuthorFirst = new authors_models_1.authorModel({
                 name: 'Haizen'
             });
             return [2 /*return*/];

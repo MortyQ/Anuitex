@@ -11,9 +11,9 @@ export interface Authors {
       name: {type: String, required: true},
       removed_at: {type: Boolean, default: false},
       product_ids: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Book', }]
-
   })
 
 
   interface AuthorModel  extends Authors,mongoose.Document{}
-  export const AuthorModel = mongoose.model<AuthorModel>('Authors', AuthorSchema);
+  export const authorModel = mongoose.model<AuthorModel>('Authors', AuthorSchema);
+  export default AuthorModel;

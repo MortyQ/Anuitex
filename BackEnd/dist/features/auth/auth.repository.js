@@ -57,7 +57,7 @@ function register(user) {
                 case 2:
                     salt = _b.sent();
                     _a = user;
-                    return [4 /*yield*/, bcrypt_1.default.hashSync('TrFls', salt)];
+                    return [4 /*yield*/, bcrypt_1.default.hashSync(user.password_hash, salt)];
                 case 3:
                     _a.password_hash = _b.sent();
                     return [4 /*yield*/, user_models_1.default.create(user)];

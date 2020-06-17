@@ -41,11 +41,9 @@ function createHandler(req, res) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0:
-                    console.log(req.body);
-                    return [4 /*yield*/, authors_services_1.create(req.body)
-                            .then(function (author) { return res.send(author); })
-                            .catch()];
+                case 0: return [4 /*yield*/, authors_services_1.create(req.body)
+                        .then(function (author) { return res.send(author); })
+                        .catch()];
                 case 1:
                     _a.sent();
                     return [2 /*return*/];
@@ -54,4 +52,19 @@ function createHandler(req, res) {
     });
 }
 exports.createHandler = createHandler;
+function getAuthorsHandler(req, res) {
+    return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, authors_services_1.getAuthorsService()
+                        .then(function (author) { return res.send(author); })
+                        .catch()];
+                case 1:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.getAuthorsHandler = getAuthorsHandler;
 //# sourceMappingURL=authors.handler.js.map

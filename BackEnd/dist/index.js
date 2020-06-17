@@ -18,7 +18,6 @@ app.use(cors_1.default());
 // BookTest();
 // FirstAuthorTest();
 mongoose_1.default.connect("mongodb://localhost/bookshopdb", { useCreateIndex: true, useNewUrlParser: true });
-console.log("WE are here");
 app.use('/auth', index_1.authRouter);
 app.use('/author', index_2.authorRouter);
 app.use('/books', index_3.bookRouter);

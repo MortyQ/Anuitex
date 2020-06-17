@@ -1,5 +1,5 @@
 import { Authors } from './authors-models';
-import { createAuthor } from './authors.repository';
+import { createAuthor, getAuthors } from './authors.repository';
 
 
 export async function create (author: Authors): Promise <Boolean> {
@@ -9,5 +9,9 @@ export async function create (author: Authors): Promise <Boolean> {
         return result
     }
     return result
+}
 
+export async function getAuthorsService(){
+    const result = await getAuthors()
+    return result
 }

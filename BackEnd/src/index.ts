@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 import Test from './dataAccess/initial';
 import FirstAuthorTest from './features/authorse/authors-initial'
-import BookTest from './features/printing-editions/first-book';
 import { authRouter } from './features/auth/index';
 import  cors from 'cors';
 import bodyParser from 'body-parser';
@@ -23,7 +22,6 @@ app.use(cors())
 
 mongoose.connect("mongodb://localhost/bookshopdb", { useCreateIndex: true, useNewUrlParser: true })
 
-console.log("WE are here")
 app.use('/auth', authRouter)
 app.use('/author', authorRouter)
 app.use('/books', bookRouter)
