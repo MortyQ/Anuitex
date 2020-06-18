@@ -21,7 +21,7 @@ export interface PrintingEdition{
         description: { type: String, required: true },
         cover_image: { type: String },
         removed_at: { type: Boolean, default: false },
-        productType: { type: Print, default: Print[0]},
+        type: { type: Print, default: Print[0]},
         price: { type: Number, required: true },
         currency: { type: Currency, default: Currency[0] },
         author_ids: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Authors', required: true }],

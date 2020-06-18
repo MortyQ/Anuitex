@@ -39,7 +39,7 @@ const BooksTable = data.books.map(item => {
         <td className='frs main-frs' >{count++}</td>
     <td className='sec main-sec' >{item.title}</td>
     <td className='sec main-sec' >{item.description}</td>
-    <td className='sec main-sec' >{item.productType}</td>
+    <td className='sec main-sec' >{item.type}</td>
     <td className='sec main-sec' >{item.price}</td>
     <td className='thr main-thr' >{item.author_ids.map(item =>{
             return (<span>{item.name}</span>)

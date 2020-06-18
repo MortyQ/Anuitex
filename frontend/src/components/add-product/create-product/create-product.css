@@ -172,6 +172,7 @@ form {
     height: 30px;
     justify-content: flex-start;
     text-align: center;
+    
 }
 
 .select-img {
@@ -179,4 +180,9 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+}
+
+.cncl-prod-right p a {
+    text-decoration: none;
+    color: white;
 }

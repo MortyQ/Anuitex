@@ -8,8 +8,10 @@ import { Application } from 'express';
 import express from 'express';
 import { authorRouter } from './features/authorse/index';
 import { bookRouter } from './features/printing-editions/index';
+import env from 'dotenv'
 
 
+env.config()
 const app: Application = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));

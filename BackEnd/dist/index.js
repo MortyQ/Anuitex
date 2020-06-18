@@ -10,6 +10,8 @@ var body_parser_1 = __importDefault(require("body-parser"));
 var express_1 = __importDefault(require("express"));
 var index_2 = require("./features/authorse/index");
 var index_3 = require("./features/printing-editions/index");
+var dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
 var app = express_1.default();
 app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use(body_parser_1.default.json());

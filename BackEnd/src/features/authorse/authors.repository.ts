@@ -21,6 +21,6 @@ export async function addBook(idBooks:string, idAuthors:Array<string>) {
 }
 
 export async function getAuthors(): Promise<Array<AuthorModel>>{
-    const result = await authorModel.find().populate('author_ids')
+    const result = await authorModel.find().populate('product_ids')
     return result
 }

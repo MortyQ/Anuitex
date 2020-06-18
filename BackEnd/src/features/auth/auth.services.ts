@@ -1,5 +1,6 @@
-import { register, confirmEmail } from './auth.repository';
-import { User } from '../shared/db-models/user-models';
+import { register, confirmEmail, confirmLogin } from './auth.repository';
+import userModel, { User } from '../shared/db-models/user-models';
+import { createToken } from './token/create-token';
 
 
 
@@ -19,3 +20,13 @@ export async function complitRegistr(id: String){
     }
     return result
 }
+
+export async function complitLogin(email:string, password_hash:string) {
+    const result = await confirmLogin(email, password_hash);
+    if(typeof result === 'string' ){
+        return result
+    }
+    const tokenResult = createToken(result)
+    return tokenResult
+}
+

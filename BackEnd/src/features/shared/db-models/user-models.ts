@@ -6,12 +6,12 @@ import crypto from "crypto";
 
 const schema = mongoose.Schema
 export interface User  {
-    password_hash: String;
-    first_name: String;
-    last_name: String;
+    password_hash: string;
+    first_name: string;
+    last_name: string;
     roles: Roles;
     email: string;
-    avatar: String;
+    avatar: string;
     confirmed_email: Boolean;
     status: Boolean;
     removed_at: Boolean;

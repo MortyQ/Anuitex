@@ -11,7 +11,7 @@ exports.bookSchema = new mongoose_1.default.Schema({
     description: { type: String, required: true },
     cover_image: { type: String },
     removed_at: { type: Boolean, default: false },
-    productType: { type: printing_1.Print, default: printing_1.Print[0] },
+    type: { type: printing_1.Print, default: printing_1.Print[0] },
     price: { type: Number, required: true },
     currency: { type: currency_1.Currency, default: currency_1.Currency[0] },
     author_ids: [{ type: mongoose_1.default.Schema.Types.ObjectId, ref: 'Authors', required: true }],

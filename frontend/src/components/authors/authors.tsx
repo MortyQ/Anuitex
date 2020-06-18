@@ -29,6 +29,7 @@ const AuthorsPage =()=>{
             func()
     },[])
     const func =async ()=>{
+        debugger;
         const resultData =await getAuthor();
         setData({
             authors: resultData
@@ -37,16 +38,12 @@ const AuthorsPage =()=>{
 
     let count = 0;
         const elementsTable = data.authors.map(item => {
-            let result = ""
-            item.product_ids.map(item =>{
-                result = item.title
-            })
-
         return(
             <tr>
             <td className='frs main-frs' >{count++}</td>
         <td className='sec main-sec' >{item.name}</td>
-        <td className='thr main-thr' >{item.product_ids.map(item =>{
+        <td className='thr main-thr' >{  item.product_ids.map(item =>{
+            debugger;
                 return (<span>{item.title}</span>)
             })}</td>
               <td className='fr  main-fr' ><a><i className="fas fa-pencil-alt"></i></a><a><i className="fas fa-times times-fa"></i></a></td>

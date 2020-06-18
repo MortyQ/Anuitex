@@ -32,3 +32,15 @@ export async function confirmEmail(id:String){
     newUser.confirmed_email = true;
     const confirmEm = await userModel.update(user, newUser )
 }
+
+export async function confirmLogin(email:string, password_hash:string):Promise<userModel| string> {
+    const loginEmail = await userModel.findOne({email: email})
+    if(!loginEmail){
+        return 'User not found'
+    }
+    const isMatch = await bcrypt.compare(password_hash, loginEmail.password_hash)
+    if(!isMatch){
+        return 'Password is not Valid'
+    }
+    return loginEmail
+}

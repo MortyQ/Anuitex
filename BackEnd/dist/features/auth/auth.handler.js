@@ -67,4 +67,19 @@ function registerEmail(req, res) {
     });
 }
 exports.registerEmail = registerEmail;
+function loginUser(req, res) {
+    return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, auth_services_1.complitLogin(req.body.email, req.body.password_hash)
+                        .then(function (tokens) { return res.send(tokens); })
+                        .catch()];
+                case 1:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.loginUser = loginUser;
 //# sourceMappingURL=auth.handler.js.map

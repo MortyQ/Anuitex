@@ -98,4 +98,27 @@ function confirmEmail(id) {
     });
 }
 exports.confirmEmail = confirmEmail;
+function confirmLogin(email, password_hash) {
+    return __awaiter(this, void 0, void 0, function () {
+        var loginEmail, isMatch;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, user_models_1.default.findOne({ email: email })];
+                case 1:
+                    loginEmail = _a.sent();
+                    if (!loginEmail) {
+                        return [2 /*return*/, 'User not found'];
+                    }
+                    return [4 /*yield*/, bcrypt_1.default.compare(password_hash, loginEmail.password_hash)];
+                case 2:
+                    isMatch = _a.sent();
+                    if (!isMatch) {
+                        return [2 /*return*/, 'Password is not Valid'];
+                    }
+                    return [2 /*return*/, loginEmail];
+            }
+        });
+    });
+}
+exports.confirmLogin = confirmLogin;
 //# sourceMappingURL=auth.repository.js.map

@@ -117,7 +117,6 @@ return(
                     <p>Authors</p>
                     <select onChange={handle} name='author_ids' >
                         {authors.map((item: Authors, i)=>{
-                            debugger
                         return(<option value={item._id} >{item.name}</option>)
                         })}
                     </select>
@@ -144,7 +143,7 @@ return(
             <p>Cancel</p>
         </button>
         <button className='cncl-prod-right' onClick={createPrintEdition} >
-            <p>Create</p>
+            <p> <a href="add-product">Create</a></p>
         </button>
     </div>
 </div>

@@ -37,6 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var auth_repository_1 = require("./auth.repository");
+var create_token_1 = require("./token/create-token");
 function registerUser(user) {
     return __awaiter(this, void 0, void 0, function () {
         var result;
@@ -71,4 +72,22 @@ function complitRegistr(id) {
     });
 }
 exports.complitRegistr = complitRegistr;
+function complitLogin(email, password_hash) {
+    return __awaiter(this, void 0, void 0, function () {
+        var result, tokenResult;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, auth_repository_1.confirmLogin(email, password_hash)];
+                case 1:
+                    result = _a.sent();
+                    if (typeof result === 'string') {
+                        return [2 /*return*/, result];
+                    }
+                    tokenResult = create_token_1.createToken(result);
+                    return [2 /*return*/, tokenResult];
+            }
+        });
+    });
+}
+exports.complitLogin = complitLogin;
 //# sourceMappingURL=auth.services.js.map

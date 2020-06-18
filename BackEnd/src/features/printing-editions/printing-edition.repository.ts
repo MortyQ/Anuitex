@@ -16,7 +16,6 @@ export async function createBook(book: PrintingEdition): Promise <Boolean> {
     addBook(result._id, result.author_ids)
     return true
 
-
 }
 
 export async function getBooks(): Promise<Array<PrintingEdition>>{
