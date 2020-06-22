@@ -24,3 +24,14 @@ export async function getAuthors(): Promise<Array<AuthorModel>>{
     const result = await authorModel.find().populate('product_ids')
     return result
 }
+
+export async function changeAuthors(_id: string, name: string) {
+    const result = await authorModel.findById(_id)
+    console.log(result.name, name)
+    if(!result){
+        return false
+    }
+    result.name = name
+    result.save()
+    return true
+}

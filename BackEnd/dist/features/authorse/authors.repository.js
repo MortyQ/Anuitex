@@ -94,4 +94,24 @@ function getAuthors() {
     });
 }
 exports.getAuthors = getAuthors;
+function changeAuthors(_id, name) {
+    return __awaiter(this, void 0, void 0, function () {
+        var result;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, authors_models_1.authorModel.findById(_id)];
+                case 1:
+                    result = _a.sent();
+                    console.log(result.name, name);
+                    if (!result) {
+                        return [2 /*return*/, false];
+                    }
+                    result.name = name;
+                    result.save();
+                    return [2 /*return*/, true];
+            }
+        });
+    });
+}
+exports.changeAuthors = changeAuthors;
 //# sourceMappingURL=authors.repository.js.map

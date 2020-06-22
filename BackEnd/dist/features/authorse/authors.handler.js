@@ -67,4 +67,19 @@ function getAuthorsHandler(req, res) {
     });
 }
 exports.getAuthorsHandler = getAuthorsHandler;
+function changeAuthorsHandler(req, res) {
+    return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, authors_services_1.changeAuthorsService(req.body.id, req.body.name)
+                        .then(function (name) { return console.log(name); })
+                        .catch()];
+                case 1:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.changeAuthorsHandler = changeAuthorsHandler;
 //# sourceMappingURL=authors.handler.js.map

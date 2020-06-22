@@ -69,4 +69,19 @@ function getBooksHandler(req, res) {
     });
 }
 exports.getBooksHandler = getBooksHandler;
+function deleteBooksHandler(req, res) {
+    return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, printing_edition_service_1.deleteBooksServices(req.body.id)
+                        .then(function (result) { return res.send(result); })
+                        .catch()];
+                case 1:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.deleteBooksHandler = deleteBooksHandler;
 //# sourceMappingURL=printing-edition.handler.js.map

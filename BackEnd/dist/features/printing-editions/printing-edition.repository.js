@@ -43,9 +43,7 @@ function createBook(book) {
         var result;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0:
-                    console.log(book);
-                    return [4 /*yield*/, books_models_1.BookModel.create(book)];
+                case 0: return [4 /*yield*/, books_models_1.BookModel.create(book)];
                 case 1:
                     result = _a.sent();
                     if (!result) {
@@ -63,7 +61,7 @@ function getBooks() {
         var result;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, books_models_1.BookModel.find().populate('author_ids')];
+                case 0: return [4 /*yield*/, books_models_1.BookModel.find({ removed_at: false }).populate('author_ids')];
                 case 1:
                     result = _a.sent();
                     return [2 /*return*/, result];
@@ -72,4 +70,25 @@ function getBooks() {
     });
 }
 exports.getBooks = getBooks;
+function deleteBooks(id) {
+    return __awaiter(this, void 0, void 0, function () {
+        var book, result;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, books_models_1.BookModel.findById(id)];
+                case 1:
+                    book = _a.sent();
+                    if (!book) {
+                        return [2 /*return*/, false];
+                    }
+                    book.removed_at = true;
+                    return [4 /*yield*/, book.save()];
+                case 2:
+                    result = _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.deleteBooks = deleteBooks;
 //# sourceMappingURL=printing-edition.repository.js.map

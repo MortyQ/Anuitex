@@ -68,4 +68,18 @@ function getBooksService() {
     });
 }
 exports.getBooksService = getBooksService;
+function deleteBooksServices(id) {
+    return __awaiter(this, void 0, void 0, function () {
+        var result;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, printing_edition_repository_1.deleteBooks(id)];
+                case 1:
+                    result = _a.sent();
+                    return [2 /*return*/, result];
+            }
+        });
+    });
+}
+exports.deleteBooksServices = deleteBooksServices;
 //# sourceMappingURL=printing-edition.service.js.map

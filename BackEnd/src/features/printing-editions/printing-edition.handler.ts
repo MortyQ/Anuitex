@@ -1,5 +1,5 @@
 import {Response, Request} from 'express';
-import { createBookService, getBooksService } from './printing-edition.service';
+import { createBookService, getBooksService, deleteBooksServices } from './printing-edition.service';
 
 export async function createHandler(req: Request, res: Response){
 
@@ -12,5 +12,11 @@ export async function createHandler(req: Request, res: Response){
 export async function getBooksHandler(req: Request, res: Response){
     await getBooksService()
     .then(books => res.send(books))
+    .catch();
+}
+
+export async function deleteBooksHandler(req: Request, res: Response){
+    await deleteBooksServices(req.body.id)
+    .then(result => res.send(result))
     .catch();
 }

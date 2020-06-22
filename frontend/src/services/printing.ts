@@ -10,3 +10,8 @@ export async function getBooks(){
     const result = await axios.post('http://localhost:3333/books/getBooks')
     return result.data
 }
+
+export async function deleteById(id: string){
+    const result = await axios.post('http://localhost:3333/books/deleteBook',{id})
+    return result.data
+}

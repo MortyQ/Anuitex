@@ -1,15 +1,11 @@
 import { PrintingEdition, BookModel } from '../shared/db-models/books-models';
 import { addBook } from "../authorse/authors.repository";
+import { ObjectId } from 'mongodb';
 
 
 
 export async function createBook(book: PrintingEdition): Promise <Boolean> {
-    
-    console.log(book)
     const result = await BookModel.create(book)
-    
-
-
     if(!result){
          return false
     }
@@ -19,6 +15,15 @@ export async function createBook(book: PrintingEdition): Promise <Boolean> {
 }
 
 export async function getBooks(): Promise<Array<PrintingEdition>>{
-    const result = await BookModel.find().populate('author_ids')
+    const result = await BookModel.find({removed_at: false }).populate('author_ids')
     return result
+}
+
+export async function deleteBooks(id: string): Promise<boolean> {
+    const book =await BookModel.findById(id)
+    if(!book){
+        return false
+    }
+    book.removed_at = true
+    const result =await book.save()
 }

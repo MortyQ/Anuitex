@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './add-product.css'
 import CreateProduct from './create-product/create-product';
-import { getBooks } from '../../services/printing';
+import { getBooks,  deleteById } from '../../services/printing';
 import { Authors } from '../../shared/models/authors-model';
 
 
@@ -31,6 +31,12 @@ const func =async ()=>{
     })
 }
 
+    const removBook = async(_id)=>{
+        const removBookId = await deleteById(_id);
+        if(removBookId){
+           func()
+        }
+    }
 
 let count = 0;
 const BooksTable = data.books.map(item => {
@@ -44,7 +50,7 @@ const BooksTable = data.books.map(item => {
     <td className='thr main-thr' >{item.author_ids.map(item =>{
             return (<span>{item.name}</span>)
         })}</td>
-          <td className='fr  main-fr' ><a><i className="fas fa-pencil-alt"></i></a><a><i className="fas fa-times times-fa"></i></a></td>
+          <td className='fr  main-fr' ><a><i className="fas fa-pencil-alt"></i></a><a href='/add-product'  ><i onClick={()=>removBook(item._id)}  className="fas fa-times times-fa"></i></a></td>
          </tr>
         )
 });
